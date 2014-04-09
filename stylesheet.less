@@ -111,7 +111,7 @@ body {
 
 .widget.ecombasket {
     float: right;
-    width: 250px;
+    width: 240px;
     z-index: 2;
     @media @mobile {
         width: 100%;
@@ -164,18 +164,22 @@ body {
         display: block;
     }
     .ecombasket-list-container {
-        display: none;
+        display: block;
         position: absolute;
         text-align: left;
         border: 0.3em solid lighten(@color-swatch5,15%);
         background-color: @color-swatch2;
         padding: 0 1em 0.5em;
-        max-height: 300px;
+        max-height: 400px;
         overflow-y: scroll;
         margin-top: 43px;
         position: absolute;
         right: -3em;
         left: 4em;
+        @media @tablet {
+            right: 0;
+            left: 0;
+        }
         @media @mobile {
             position: relative;
             border: 2px solid lighten(@color-swatch5,15%);
@@ -198,10 +202,10 @@ body {
                     padding: 1.5em 0;
                 }
                 .ecombasket-item-image {
-                    width: 55px;
-                    height: 55px;
+                    width: 28%;
+                    height: 57px;
                     margin-top: 5px;
-                    margin-right: 1em;
+                    margin-right: 7%;
                     background-position: center center;
                     background-repeat: no-repeat;
                     -webkit-background-size: cover;
@@ -213,36 +217,43 @@ body {
                     img {
                         display: none;
                     }
-                }            
-                .ecombasket-item-title, .ecombasket-item-count {
-                    font-size: bkscale(@font-swatch5-font-size,0.9);
-                    line-height: bkscale(@font-swatch5-line-height,0.9);
-                }
-                .ecombasket-item-title, .ecombasket-item-count, button {
+                }  
+
+                .ecombasket-item-info {
                     float: left;
-                    @media @tablet {
-                        width: 78%;
+                    max-width: 65%;         
+                    .ecombasket-item-title, .ecombasket-item-count, .ecombasket-item-price, .ecombasket-remove-button {
+                        font-size: bkscale(@font-swatch5-font-size,0.9);
+                        line-height: bkscale(@font-swatch5-line-height,0.9);
                     }
-                }
-                .ecombasket-item-title {
-                    padding-right: 5px;
-                }
-                button {
-                    border: none;
-                    background-color: transparent;
-                    text-decoration: underline;
-                    padding: 0;
-                    display: block;
-                    text-align: left;
-                    color: @color-swatch3;
-                    &:hover {
-                        text-decoration: none;
+                    .ecombasket-item-title, .ecombasket-item-count, .ecombasket-item-price, .ecombasket-item-price, .ecombasket-remove-button {
+                        float: left;
                     }
-                }
+                    .ecombasket-item-title, .ecombasket-item-count {
+                        padding-right: 5px;
+                    }
+                    .ecombasket-item-count {
+                        font-weight: 600;
+                    }
+                    .ecombasket-remove-button {
+                        width: 100%;
+                        border: none;
+                        background-color: transparent;
+                        text-decoration: underline;
+                        padding: 0;
+                        margin: 0;
+                        display: block;
+                        text-align: left;
+                        color: @color-swatch3;
+                        &:hover {
+                            color: @color-swatch5;
+                        }
+                    }
+                } 
             }
         }
         .ecombasket-total-wrap p {
-            padding: 1em 0 0;
+            padding: 0.3em 0 0;
         }
         .ecombasket-checkout-wrap {
             margin: 1em 0;
@@ -260,9 +271,7 @@ body {
                 &:hover {
                     background-color: @color-swatch5;
                     border: 2px solid @color-swatch5;
-                }
-                @media @tablet {
-                    display: inline-block;
+                    text-decoration: none;
                 }
                 @media @mobile {
                     display: block;
@@ -1403,7 +1412,7 @@ hr {
     h2 {
         text-align: center;
         margin-bottom: 1em;
-        border-bottom: 1px solid fade(@color-swatch5,8%);
+        border-bottom: 1px solid fade(@color-swatch5,13%);
         padding: 1em 0 2em;
         @media @tablet {
             padding: 1em;
@@ -1415,7 +1424,7 @@ hr {
         tr {
             width: 100%;
             th, td {
-                border-bottom: 1px solid fade(@color-swatch5,8%);
+                border-bottom: 1px solid fade(@color-swatch5,13%);
                 padding: 1.5em 0;
                 text-align: left;
                 &:nth-child(1) {
@@ -1505,6 +1514,24 @@ hr {
         @media @tablet {
             width: 100%;
         }
+        .form-group {
+            span:not(.no-shipping) {
+                display:none;
+            }
+            &.invalid {
+                span:not(.no-shipping) {
+                    display:block;
+                }
+                input {
+                    margin-bottom: 0.5em;
+                    outline: 1px solid red;
+                }
+                span {
+                    color: red;
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
         .delivery-title {
             font-size: @font-swatch3-font-size;
             font-weight: @font-swatch3-font-weight;
@@ -1517,41 +1544,55 @@ hr {
             float: left;
         }
         input {
-            border: 1px solid fade(@color-swatch5,8%);
+            border: 1px solid fade(@color-swatch5,13%);
             margin-bottom: 1em;
         }
         select {
             margin-bottom: 1.5em;
             -webkit-appearance: menulist;
         }
+        .delivery-price-tax {
+            text-align: right;
+            font-size: @font-swatch5-font-size;
+            font-weight: @font-swatch5-font-weight;
+            color: @font-swatch5-color;
+            margin-top: 2em;
+            padding: 1em 0;
+            border-top: 1px solid fade(@color-swatch5,13%);
+        }
+
         .delivery-price {
             text-align: right;
             font-size: @font-swatch3-font-size;
             font-weight: @font-swatch3-font-weight;
             color: @font-swatch3-color;
-            padding: 1em 0.5em;
-            border-top: 1px solid fade(@color-swatch5,8%);
-            border-bottom: 1px solid fade(@color-swatch5,8%);
-            margin-top: 2em;
+            padding: 1em 0 0;
+            border-top: 1px solid fade(@color-swatch5,13%);
+            border-bottom: 0;
         }
     }
+
+    .checkout-total-tax {
+        text-align: right;
+        font-size: @font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        color: @font-swatch5-color;
+        margin-top: 2em;
+        padding: 20px 5px;
+    }
+
     .checkout-total-amount {
         text-align: right;
         font-size: @font-swatch3-font-size;
         font-weight: @font-swatch3-font-weight;
         color: @font-swatch3-color;
-        margin: 2em 0;
-        padding: 1em 0.5em;
-        border-top: 1px solid fade(@color-swatch5,8%);
-        @media @tablet {
-            border-top: none;
-
-        }
+        padding: 20px 5px;
+        margin-bottom: 1em;
+        border-top: 1px solid fade(@color-swatch5,13%);
     }
-}
-.widget.stripe {
-    text-align: right;
-    .checkout-stripe {
+        
+    .checkout-order-button {
+        float: right;
         padding: 8px 14px; 
         font-family: @font-swatch7-font-family;
         color: @font-swatch7-color;
@@ -1566,8 +1607,11 @@ hr {
             color: @color-swatch2;
             cursor: pointer;
         }
+        &:disabled {
+            display: none;
+        }
     }
-}
 
+}
 
 
