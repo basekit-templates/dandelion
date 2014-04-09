@@ -247,17 +247,20 @@ body {
         .ecombasket-checkout-wrap {
             margin: 1em 0;
             .ecombasket-checkout-link {
-                padding: 10px;
+                padding: 8px 14px;
                 font-family: @font-swatch7-font-family;
                 color: @color-swatch2;
                 font-size: @font-swatch7-font-size;
                 font-weight: @font-swatch7-font-weight;
                 line-height: @font-swatch7-line-height;
                 background-color: lighten(@color-swatch5,15%);
-                border: none;
                 display: block;
                 text-align: center;
                 border: 2px solid lighten(@color-swatch5,15%);
+                &:hover {
+                    background-color: @color-swatch5;
+                    border: 2px solid @color-swatch5;
+                }
                 @media @tablet {
                     display: inline-block;
                 }
@@ -506,6 +509,7 @@ body {
             .ecom-productlist-price {
                 color: @color-swatch3;
                 font-weight: 700;
+                font-size: bkscale(@font-swatch5-font-size,1.1);
             }
         }
     }
