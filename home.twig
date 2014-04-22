@@ -3,24 +3,28 @@
 
 {% block content %}
 
-{{widget('extendednavigation', 'navigationheader', {})|raw}}
+<div class="bk-pt-home">
 
 <header class="bk-header">
-    <div class="wrapper clearfix">
-        <div class="companyheader clearfix">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-            {{widget('content', 'headercontent', {"content":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec eros non enim condimentum tristique. Fusce commodo lectus ac neque tristique auctor.</p>"})|raw}}
-            {{widget('clicktocall', 'headerclicktocall', {phoneText: '212 6574 6736'})|raw}}
-            <div class="bottom-line-header"></div>
+    <div class="companyheader wrapper clearfix">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        <div class="top-basket-container">
+            {{widget('ecombasket', 'ecombasket', {})|raw}}
         </div>
     </div><!--end wrapper clearfix-->
+    
 </header>
 
+{{widget('extendednavigation', 'navigationheader', {})|raw}}
+
 <div class="main wrapper clearfix">
-{{widget('menusections', 'menusections1', {})|raw}}
-{{widget('menu', 'menu1', {})|raw}}
-</div>
+    <div class="mobile-basket-container">
+        {{widget('ecombasket', 'mobileecombasket', {})|raw}}
+    </div>
+    {{widget('ecomproductslist', 'ecomlisthome', {})|raw}}
+    {{zone('main')|raw}}
+</div> 
 
 <footer class="bk-footer">
     <div class="wrapper clearfix">
@@ -28,5 +32,7 @@
         {{widget('socialicons', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
     </div>
 </footer>
+
+</div>
 
 {% endblock %}
