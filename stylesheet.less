@@ -93,6 +93,35 @@ body {
   ECOM - BASKET
    =============================== */
 
+.main .widget.ecombasket {
+    float: left;
+    width: 100%;
+    z-index: 2;
+    .ecombasket-pull {
+        background-color: @font-swatch7-background-color;
+        position: relative;
+    }
+    .ecombasket-list-container {
+        margin-top: -2px;
+        left: 0;
+        right:0;
+        position: relative;
+        border: 2px solid lighten(@color-swatch5,15%);
+        background-color: @color-swatch1;
+        ul li .ecombasket-item-image {
+            width: 56px;
+            height: 56px;
+            margin-right: 20px;
+        }
+        .ecombasket-checkout-wrap .ecombasket-checkout-link {
+            display: inline-block;
+            @media @mobile {
+                display: block;
+            }
+        }
+    }
+}
+
 .top-basket-container {
     @media @mobile {
         display: none;
@@ -112,7 +141,7 @@ body {
 .widget.ecombasket {
     float: right;
     width: 240px;
-    z-index: 2;
+    z-index: 3;
     @media @mobile {
         width: 100%;
         float: none;
@@ -204,7 +233,7 @@ body {
                 width: 100%;
                 list-style: none;
                 float: left;
-                border-bottom: 1px solid fade(@color-swatch5,8%);
+                border-bottom: 1px dotted fade(@color-swatch5,35%);
                 padding: 1em 0;
                 @media @tablet {
                     padding: 1.5em 0;
