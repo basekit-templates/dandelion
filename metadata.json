@@ -2,7 +2,7 @@
     "name":"Dandelion",
     "thumbnail":"dandelion.png",
     "screenshot":"dandelion.png",
-    "pageTypes": ["default", "home", "about", "contact", "gallery"],
+    "pageTypes": ["default", "home", "about", "contact", "gallery", "ecomcheckout"],
     "tags": {
     "en": ["clean", "menu", "ecommerce", "shop"],
     "es": ["limpio", "menú", "ecommerce", "tienda"],
