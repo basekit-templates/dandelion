@@ -212,7 +212,7 @@ body {
         margin-top: 43px;
         position: absolute;
         right: -3em;
-        left: 4em;
+        left: 3.5em;
         @media @tablet {
             right: 0;
             left: 0;
@@ -521,6 +521,69 @@ body {
   ECOM - PRODUCTLIST
    =============================== */
 .widget.ecomproductslist {
+    .productlist-display-form {
+        width: 66.5%;
+        margin: 3% 0 3% 3%;
+        display: inline-block;
+        @media @tablet {
+            width: 97%;
+        }
+        @media @mobile {
+            background-color: darken(@color-swatch1,5%);
+            padding: 2em 1em 0;
+            margin-left: 0;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .form-group {
+            width: auto;
+            margin-right: 1%;
+            display: inline-block;
+            @media @tablet {
+                width: 30%;
+                margin-right: 2.5%;
+            }
+            @media @mobile {
+                width: 100%;
+            }
+            label {
+                display: none;
+            }
+            select {
+                cursor: pointer;
+                -webkit-appearance: none;
+                -webkit-border-radius: 0;
+                position: relative;
+                background-image: image('/images/arrow-down.png');
+                background-repeat: no-repeat;
+                background-position: right 12px center;
+                margin-bottom: 12px;
+                padding: 8px 33px 8px 8px;
+                border: none;
+                background-color: darken(@color-swatch1,5%);
+                color: @color-swatch5;
+                width: 100%;
+                @media @mobile {
+                    border: none;
+                    background-color: darken(@color-swatch1,12%);
+                }
+            }
+        }
+    }
+    .productlist-item-count {
+        width: 30%;
+        text-align: right;
+        display: inline-block;
+        margin-left: 0;
+        @media @tablet {
+            text-align: left;
+            width: 100%;
+            margin-left: 3%;
+        }
+        @media @mobile {
+            margin-left: 0;
+        }
+    }
     .ecom-productslist-product {
         .ecom-productslist-image-wrap {
             border: 1.5em solid @color-swatch2;
@@ -547,6 +610,12 @@ body {
                 font-size: bkscale(@font-swatch5-font-size,1.1);
             }
         }
+    }
+}
+
+.svg {
+    .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, select {
+        background-image: image('/images/arrow-down.svg');
     }
 }
 
