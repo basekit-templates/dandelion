@@ -559,22 +559,9 @@ body {
             }
             select {
                 cursor: pointer;
-                -webkit-appearance: none;
-                -webkit-border-radius: 0;
-                position: relative;
-                background-image: image('/images/arrow-down.png');
-                background-repeat: no-repeat;
-                background-position: right 12px center;
-                margin-bottom: 12px;
-                padding: 8px 33px 8px 8px;
-                border: none;
-                background-color: darken(@color-swatch1,5%);
-                color: @color-swatch5;
+                -webkit-appearance: menulist;
+                display: inline-block;
                 width: 100%;
-                @media @mobile {
-                    border: none;
-                    background-color: darken(@color-swatch1,12%);
-                }
             }
             &:first-child select {
                 width: 73%;
@@ -589,7 +576,7 @@ body {
         text-align: right;
         display: inline-block;
         margin-left: 0;
-        @media @tablet {
+        @media only screen and (max-width: 855px) {
             text-align: left;
             width: 100%;
             margin-left: 3%;
@@ -627,11 +614,6 @@ body {
     }
 }
 
-.svg {
-    .widget.ecomproductslist .productlist-display-form .form-group select {
-        background-image: image('/images/arrow-down.svg');
-    }
-}
 
 /* ===============================
    MENU SECTIONS NAVIGATION
