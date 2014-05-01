@@ -1269,6 +1269,17 @@ button.btn, .widget.profile form button, .signupform fieldset button, .contactfo
 .blog-post-item {
     margin: 1.5em 0;
     padding-bottom: 1em;
+    .blog-post-feature-image-wrap {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 300px;
+        background-position: center;
+        margin: 2em 0;
+        border: 2em solid white;
+        img {
+            display: none;
+        }
+    }
     h2 {
         a {
             font-family: @font-swatch2-font-family;
@@ -1297,12 +1308,16 @@ button.btn, .widget.profile form button, .signupform fieldset button, .contactfo
 /* BLOG SEARCH */
 .blogsearch {
     form {
+        label {
+            display: block;
+        }
         input {
             border: 1px solid darken(@color-swatch1,3%);
             background-color: @color-swatch2;
-            height: 48px;
+            height: 49px;
             margin: 0 5px 5px 0;
-            width: 100%;
+            width: 40%;
+            min-width: 160px;
             }
 
         button {
