@@ -633,7 +633,6 @@ body {
     }
 }
 
-
 /* ===============================
    MENU SECTIONS NAVIGATION
    =============================== */
@@ -1494,6 +1493,18 @@ hr {
                 }
                 &:hover .text:before {
                     background-image: image('/images/basketicon-white.png');
+                }
+                &.added .text:before {
+                    color: @color-swatch2;
+                    content: "\2713";
+                    background-image: none;
+                    color: white;
+                    top: 0;
+                }
+                &.added:hover .text:before {
+                    content: "\2713";
+                    background-image: none;
+                    color: @color-swatch2;
                 }
             }
             &:hover {
