@@ -1269,13 +1269,24 @@ button.btn, .widget.profile form button, .signupform fieldset button, .contactfo
 .blog-post-item {
     margin: 1.5em 0;
     padding-bottom: 1em;
+    text-align: center;
     .blog-post-feature-image-wrap {
         background-size: cover;
         background-repeat: no-repeat;
-        height: 300px;
+        height: 400px;
+        width: 400px;
         background-position: center;
-        margin: 2em 0;
-        border: 2em solid white;
+        margin: 2em auto;
+        border: 1.5em solid @color-swatch2;
+        @media @tablet {
+            width: 300px;
+            height: 300px;
+        }
+        @media @mobile {
+            width: 100%;
+            height: 250px;
+            margin: 1em auto;
+        }
         img {
             display: none;
         }
@@ -1318,6 +1329,9 @@ button.btn, .widget.profile form button, .signupform fieldset button, .contactfo
             margin: 0 5px 5px 0;
             width: 40%;
             min-width: 160px;
+            @media @mobile {
+                width: 100%;
+            }
             }
 
         button {
