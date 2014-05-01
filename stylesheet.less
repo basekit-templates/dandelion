@@ -1665,8 +1665,8 @@ hr {
             padding: 0 0 20px 0;
             display: block;
         }
-       .form-group {
-            width: 50%;
+        .form-group {
+            width: 100%;
             @media only screen and (max-width: 1200px) { 
                 width: 100%;
             }
@@ -1692,7 +1692,6 @@ hr {
     }
 
     .checkout-total-tax {
-        text-align: right;
         font-size: @font-swatch5-font-size;
         font-weight: @font-swatch5-font-weight;
         color: @font-swatch5-color;
@@ -1704,7 +1703,6 @@ hr {
     }
 
     .checkout-total-amount {
-        text-align: right;
         font-size: @font-swatch3-font-size;
         font-weight: @font-swatch3-font-weight;
         color: @font-swatch3-color;
@@ -1747,6 +1745,10 @@ hr {
             background-color: lighten(@color-swatch5,25%);
             border: 2px solid lighten(@color-swatch5,25%);
         }
+    }
+    .checkout-legal-links {
+        list-style: none;
+        padding: 20px 0 0;
     }
 
 }
