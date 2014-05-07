@@ -1476,7 +1476,13 @@ hr {
             }
             .ecom-product-cattag {
                 span {
-                   display: block;
+                    display: block;
+                    a {
+                        text-decoration: underline;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
                 }
                 @media @mobile {
                     background-color: darken(@color-swatch1,3%);
