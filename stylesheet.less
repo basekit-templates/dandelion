@@ -527,7 +527,7 @@ body {
         margin: 3% 0 3% 3%;
         display: inline-block;
         @media @tablet {
-            width: 97%;
+            width: 100%%;
         }
         @media @mobile {
             background-color: darken(@color-swatch1,5%);
@@ -541,15 +541,12 @@ body {
             margin-right: 1%;
             display: inline-block;
             @media @tablet {
-                width: 30%;
                 margin-right: 2.5%;
             }
             @media @mobile {
                 width: 100%;
             }
             label[for="productlist-sort"] {
-                display: block;
-                width: 25%;
                 display: inline-block;
                 @media @tablet {
                     width: 100%;
@@ -561,10 +558,6 @@ body {
             select {
                 cursor: pointer;
                 display: inline-block;
-                width: 100%;
-            }
-            &:first-child select {
-                width: 73%;
                 @media @tablet {
                     width: 100%;
                 }
@@ -1786,5 +1779,3 @@ hr {
     }
 
 }
-
-
