@@ -1492,7 +1492,6 @@ hr {
         }
         .btn {
             border: 2px solid lighten(@color-swatch5,15%);
-            display: block;
             width: 70%;
             margin: 2.5em 0 0;
             @media @tablet {
@@ -1502,16 +1501,17 @@ hr {
                 width:100%;
             }
             &.ecom-product-add-to-cart-btn {
+                display: block;
+                margin-bottom: 1.5em;
                 .text:before {
                     content: "";
                     background-image: image('/images/basketicon.png');
                     background-repeat: no-repeat;
-                    display: block;
+                    display: inline-block;
                     height: 16px;
                     width: 21px;
-                    margin: 0 7px 1.5em 0;
                     position: relative;
-                    top:4px;
+                    top: 4px;
                 }
                 &:hover .text:before {
                     background-image: image('/images/basketicon-white.png');
@@ -1533,6 +1533,7 @@ hr {
                 }
             }
             &.ecom-product-go-to-checkout-btn {
+                marin-top: 1.5em;
                 text-align: center;
             }
             &:hover {
