@@ -526,7 +526,7 @@ body {
         margin: 3% 0 3% 3%;
         display: inline-block;
         @media @tablet {
-            width: 97%;
+            width: 100%%;
         }
         @media @mobile {
             background-color: darken(@color-swatch1,5%);
@@ -540,15 +540,12 @@ body {
             margin-right: 1%;
             display: inline-block;
             @media @tablet {
-                width: 30%;
                 margin-right: 2.5%;
             }
             @media @mobile {
                 width: 100%;
             }
             label[for="productlist-sort"] {
-                display: block;
-                width: 25%;
                 display: inline-block;
                 @media @tablet {
                     width: 100%;
@@ -560,10 +557,6 @@ body {
             select {
                 cursor: pointer;
                 display: inline-block;
-                width: 100%;
-            }
-            &:first-child select {
-                width: 73%;
                 @media @tablet {
                     width: 100%;
                 }
@@ -1507,6 +1500,8 @@ hr {
                 width:100%;
             }
             &.ecom-product-add-to-cart-btn {
+                display: block;
+                margin-bottom: 1.5em;
                 .text:before {
                     content: "";
                     background-image: image('/images/basketicon.png');
@@ -1514,9 +1509,8 @@ hr {
                     display: inline-block;
                     height: 16px;
                     width: 21px;
-                    margin: 0 7px 0 0;
                     position: relative;
-                    top:4px;
+                    top: 4px;
                 }
                 &:hover .text:before {
                     background-image: image('/images/basketicon-white.png');
@@ -1536,6 +1530,10 @@ hr {
                     background-image: none;
                     color: @color-swatch2;
                 }
+            }
+            &.ecom-product-go-to-checkout-btn {
+                marin-top: 1.5em;
+                text-align: center;
             }
             &:hover {
                 border: 2px solid @color-swatch5;
@@ -1785,5 +1783,3 @@ hr {
     }
 
 }
-
-
