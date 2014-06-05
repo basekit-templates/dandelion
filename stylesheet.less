@@ -329,14 +329,12 @@ body {
 .widget.extendednavigation {
     max-width: 100%;
     min-height: 40px;
-    float: left;
 	width: 100%;
     background-color: @color-swatch7;
     -webkit-box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
     -moz-box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
     box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
     .extendednavigation {
-        float: none;
         position: relative;
         width: 90%;
         margin: 0 5%;
@@ -364,8 +362,7 @@ body {
                 padding: 40px 0 0;
             }
             li {
-                float: left;
-                display: block;
+                display: inline-block;
                 padding: 5px 0;
                 @media @tablet {
                     width: 100%;
@@ -387,7 +384,7 @@ body {
                         border: 1px solid fade(@color-swatch3, 25%);
                         z-index: 500;
                         padding: 0;
-                        margin: 7px 0 0 0;
+                        margin: 0;
                         li {
                             display: block;
                             width: 100%;
