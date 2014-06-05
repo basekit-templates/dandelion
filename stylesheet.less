@@ -552,13 +552,11 @@ body {
                 label[for="productlist-categories"], label[for="productlist-tags"] {
                     display: none;
                 }
-                label[for="productlist-itemcount"] {
-                    select {
-                        width: auto;
-                        @media @mobile {
-                            width: 100%;
-                            margin-bottom: 0;
-                        }
+                select[name="displayCount"] {
+                    width: auto;
+                    @media @mobile {
+                        width: 100%;
+                        margin-bottom: 0;
                     }
                 }
                 select {
