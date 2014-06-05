@@ -115,6 +115,10 @@ body {
         }
         .ecombasket-checkout-wrap .ecombasket-checkout-link {
             display: inline-block;
+            background-color: transparent;
+            &:hover {
+                background-color: @color-swatch5;
+            }
             @media @mobile {
                 display: block;
             }
@@ -519,63 +523,103 @@ body {
 /* ===============================
   ECOM - PRODUCTLIST
    =============================== */
-.widget.ecomproductslist {
-    .productlist-display-form {
-        width: 66.5%;
-        margin: 3% 0 3% 3%;
+.widget.ecomproductslist .ecom-productslist-products {
+    .productlist-filter {
+        margin: 1% 0 2% 3%;
         display: inline-block;
-        @media @tablet {
-            width: 100%%;
-        }
+        width: 100%;
         @media @mobile {
-            background-color: darken(@color-swatch1,5%);
-            padding: 2em 1em 0;
-            margin-left: 0;
-            margin-bottom: 20px;
-            width: 100%;
+            margin: 1% 0;
         }
-        .form-group {
-            width: auto;
-            margin-right: 1%;
-            display: inline-block;
-            @media @tablet {
-                margin-right: 2.5%;
-            }
+        .productlist-display-form {
             @media @mobile {
+                background-color: darken(@color-swatch1,5%);
+                padding: 2em 1em 0;
+                margin-bottom: 20px;
                 width: 100%;
             }
-            label[for="productlist-sort"] {
+            .form-group {
                 display: inline-block;
-                @media @tablet {
+                @media @mobile {
                     width: 100%;
                 }
-            }
-            label {
-                display: none;
-            }
-            select {
-                cursor: pointer;
-                display: inline-block;
-                @media @tablet {
+                label[for="productlist-sort"] {
+                    display: inline-block;
+                    @media @tablet {
+                        width: 100%;
+                    }
+                }
+                label[for="productlist-categories"], label[for="productlist-tags"] {
+                    display: none;
+                }
+                label[for="productlist-itemcount"] {
+                    select {
+                        width: auto;
+                        @media @mobile {
+                            width: 100%;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                select {
+                    -moz-appearance: none;
+                    text-indent: 0.01px;
+                    text-overflow: '';
+                    background-position: right 12px center;
+                    background-position-x: 93%;
+                    background-position-y: 55%;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    -webkit-border-radius: 0;
+                    position: relative;
+                    background-image: image('/images/arrow-down.png');
+                    background-repeat: no-repeat;
+                    background-position: right 12px center;
+                    margin-bottom: 12px;
+                    padding: 8px 33px 8px 8px;
+                    border: 1px solid darken(@color-swatch1,3%);
+                    background-color: @color-swatch2;
+                    color: @color-swatch5;
+                    height: 35px;
                     width: 100%;
+                    @media @mobile {
+                        width: 100%;
+                        height: 45px;
+                        border: 1px solid darken(@color-swatch1,8%);
+                    }
+                }
+                select::-ms-expand {
+                    display: none;
+                }
+                &.productlist-search {
+                    input {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -webkit-border-radius: 0;
+                        height: 35px;
+                        border: 1px solid darken(@color-swatch1,3%);
+                        @media @mobile {
+                            width: 100%;
+                            margin-bottom: 5px;
+                            height: 45px;
+                            border: 1px solid darken(@color-swatch1,8%);
+                        }
+                    }
+                    .btn {
+                        padding: 1px 14px;
+                        background-color: transparent;
+                        &:hover {
+                            background-color: @color-swatch5;
+                        }
+                        @media @mobile {
+                            padding: 8px 14px;
+                        }
+                    }
                 }
             }
         }
     }
-    .productlist-item-count {
-        width: 30%;
-        text-align: right;
-        display: inline-block;
-        margin-left: 0;
-        @media only screen and (max-width: 855px) {
-            text-align: left;
-            width: 100%;
-            margin-left: 3%;
-        }
-        @media @mobile {
-            margin-left: 0;
-        }
-    }
+
     .ecom-productslist-product {
         .ecom-productslist-image-wrap {
             border: 1.5em solid @color-swatch2;
@@ -1378,6 +1422,47 @@ hr {
     background-color: @color-swatch2;
 }
 
+/* ===============================
+  ECOM - FEATURED PRODUCTS
+   =============================== */
+
+.widget.ecomfeaturedproducts {
+    text-align: center;
+    .ecom-featuredproducts-header {
+        width: 100%;
+        padding: 2em 0;
+    }
+    .ecom-featuredproducts-wrap .ecom-featuredproducts-product {
+        .ecom-featuredproducts-image-wrap {
+            background-color: @color-swatch2;
+            border: 2em solid @color-swatch2;
+            margin-bottom: 20px;
+        }
+        .ecom-featuredproducts-info {
+            .ecom-featuredproducts-title {
+                color: @font-swatch3-color;
+                font-size: @font-swatch3-font-size;
+                line-height: @font-swatch3-color;
+                font-weight: @font-swatch3-font-weight;
+                font-family: @font-swatch3-font-family;
+            }
+            .ecom-featuredproducts-price {
+                color: @font-swatch5-color;
+                font-size: @font-swatch5-font-size;
+                line-height: @font-swatch5-color;
+                font-weight: @font-swatch5-font-weight;
+                font-family: @font-swatch5-font-family;
+            }
+        }
+    }
+}
+
+.ecom-featuredproducts-product {
+    .ecom-featuredproducts-image-wrap {
+        background-color: @color-swatch2;
+    }
+}
+
 
 /* ===============================
   ECOM - PRODUCT
@@ -1780,5 +1865,4 @@ hr {
         list-style: none;
         padding: 20px 0 0;
     }
-
 }
