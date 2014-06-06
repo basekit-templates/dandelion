@@ -107,6 +107,13 @@ body {
         right:0;
         position: relative;
         border: 2px solid lighten(@color-swatch5,15%);
+        -webkit-box-shadow: none;
+        -moz-box-shadow:    none;
+        box-shadow:        none;
+        -webkit-appearance: 0;
+        -moz-appearance: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
         background-color: @color-swatch1;
         ul li .ecombasket-item-image {
             width: 56px;
@@ -208,12 +215,19 @@ body {
         display: none;
         position: absolute;
         text-align: left;
-        border: 0.3em solid lighten(@color-swatch5,15%);
+        border: 1px solid darken(@color-swatch2,5%);
+        -webkit-box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow:    0px 5px 4px 0px rgba(0, 0, 0, 0.15);
+        box-shadow:         0px 5px 4px 0px rgba(0, 0, 0, 0.15);
         background-color: @color-swatch2;
+        -webkit-appearance: 5px;
+        -moz-appearance: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
         padding: 0 1em 0.5em;
         max-height: 400px;
         overflow-y: scroll;
-        margin-top: 43px;
+        margin-top: 48px;
         position: absolute;
         right: -3em;
         left: 3.5em;
@@ -273,6 +287,9 @@ body {
                     .ecombasket-item-title, .ecombasket-item-count {
                         padding-right: 5px;
                     }
+                    .ecombasket-item-title:hover {
+                        color: @color-swatch5;
+                    }
                     .ecombasket-item-count {
                         font-weight: 600;
                     }
@@ -282,7 +299,7 @@ body {
                     .ecombasket-remove-button {
                         border: none;
                         background-color: transparent;
-                        text-decoration: underline;
+                        text-decoration: none;
                         padding: 0;
                         margin: 0;
                         display: block;
@@ -290,6 +307,7 @@ body {
                         color: @color-swatch3;
                         &:hover {
                             color: @color-swatch5;
+                            text-decoration: underline;
                         }
                     }
                 } 
