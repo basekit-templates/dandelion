@@ -640,7 +640,10 @@ body {
         .ecom-productslist-image-wrap {
             border: 1.5em solid @color-swatch2;
             background-color: @color-swatch2;
-            height: 288px;
+            height: 300px;
+            @media @mobile {
+                height: 250px;
+            }
         }
         .ecom-productlist-info {
             background: @color-swatch1;
@@ -1456,6 +1459,10 @@ hr {
             background-color: @color-swatch2;
             border: 2em solid @color-swatch2;
             margin-bottom: 20px;
+            height: 300px;
+            @media @mobile {
+                height: 250px;
+            }
         }
         .ecom-featuredproducts-info {
             .ecom-featuredproducts-title {
