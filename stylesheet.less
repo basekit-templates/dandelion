@@ -354,7 +354,7 @@ a.btn.ecombasket-summary-link {
     -webkit-box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
     -moz-box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
     box-shadow: inset 0px 3px 3px 3px rgba(0,0,0,0.05);
-    &.extendednavigation {
+    .extendednavigation {
         position: relative;
         width: 100%;
         margin: 0 auto;
@@ -363,14 +363,14 @@ a.btn.ecombasket-summary-link {
             margin: 0 auto;
         }
         ul {
-            margin: 0 auto;
+            margin: 0 -14px;
             padding: 1.5em 0;
             @media @tablet {
                 /* Hidden until nav icon is clicked */
                 /* Then these styles are applied */
                 border-top: 1px solid @color-swatch7;
                 padding: 40px 0 0;
-
+                margin: 0 auto;
             }
             li {
                 display: inline-block;
@@ -426,6 +426,7 @@ a.btn.ecombasket-summary-link {
                     }
                     @media @tablet {
                         color: @color-swatch5;
+                        padding: 0 5%;
                     }
                 }
                 &.folder {
@@ -444,6 +445,7 @@ a.btn.ecombasket-summary-link {
                         position: relative;
                         @media @tablet {
                                 color: @color-swatch5;
+                                padding: 0 5%;
                             }
                         &:hover {
                             color: @font-swatch6-color-hover;
@@ -503,6 +505,16 @@ a.btn.ecombasket-summary-link {
             }
         }
     }
+}
+
+// Selected state
+.extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
+    a, .text {
+        text-decoration: underline;
+    }
+}
+.extendednavigation ul li.folder.selected ul li .text {
+    color: @font-swatch6-color;
 }
 
 /* ===============================
