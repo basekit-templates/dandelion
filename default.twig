@@ -9,10 +9,12 @@
         {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
         {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         <div class="top-basket-container">
-            {{widget('ecombasket', 'ecombasket', {})|raw}}
+            {% if page.request != 'checkout' %}
+                {{widget('ecombasket', 'ecombasket', {})|raw}}
+            {% endif %}
         </div>
     </div><!--end wrapper clearfix-->
-    
+
 </header>
 
 {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
@@ -20,9 +22,9 @@
 <div class="main wrapper clearfix">
     <div class="mobile-basket-container">
         {{widget('ecombasket', 'mobileecombasket', {})|raw}}
-    </div> 
+    </div>
     {{zone('main')|raw}}
-</div> 
+</div>
 
 <footer class="bk-footer">
     <div class="wrapper clearfix">
