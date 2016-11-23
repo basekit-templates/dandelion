@@ -1109,7 +1109,7 @@ select[name="displayCount"] {
     margin-bottom: 10px;
 }
 
-button.btn, .widget.profile form button, .signupform fieldset button, .contactform button.btn, .btn {
+button.btn, .widget.profile form button, .signupform fieldset button, .contactform button.btn, .advancedcontactform fieldset button, .btn {
     border: 2px solid lighten(@color-swatch5,15%);
     padding: 8px 14px;
     font-family: @font-swatch7-font-family;
@@ -1182,18 +1182,28 @@ button.btn, .widget.profile form button, .signupform fieldset button, .contactfo
 }
 
 /* ===============================
-  CONTACT FORM
+  CONTACT FORM AND ADVANCED FORM
    =============================== */
 
-    .widget.contactform fieldset input, .widget.contactform fieldset textarea {
+    .widget.contactform fieldset input,
+    .widget.contactform fieldset textarea,
+    .advancedcontactform form input[type=email], 
+    .advancedcontactform form input[type=text],
+    .advancedcontactform fieldset textarea {
         border: 1px solid darken(@color-swatch1,3%);
     }
 
-   .contactform fieldset {
+   .contactform fieldset,
+   .advancedcontactform fieldset {
         border: none;
         margin: 4px 0 13px;
         padding: 0;
     }
+
+    .advancedcontactform .option-list {
+        padding: 1em 0;
+    }
+
 
 /* ===============================
   SIGN UP FORM
