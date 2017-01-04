@@ -76,6 +76,7 @@ body {
                 text-decoration: none;
             }
             @media @mobile {
+                text-align: center;
                 font-size: bkscale(@font-swatch10-font-size,0.8);
                 line-height: bkscale(@font-swatch10-line-height,0.8);
             }
@@ -191,12 +192,6 @@ a.btn.ecombasket-summary-link {
             p:before {
                 background-image: image('/images/basketicon-white.png');
             }
-        }
-        &:hover:before {
-            content:"\25B2";
-            color: lighten(@color-swatch5,15%);
-            bottom: -10px;
-            position: absolute;
         }
     }
     &.show-content .ecombasket-list-container {
