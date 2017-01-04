@@ -7,8 +7,10 @@
 
 <header class="bk-header">
     <div class="companyheader wrapper clearfix">
-        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        <div class="brand">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
         <div class="top-basket-container">
             {{widget('ecombasket', 'ecombasket', {})|raw}}
         </div>
@@ -19,9 +21,6 @@
 {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
 
 <div class="main wrapper clearfix">
-    <div class="mobile-basket-container">
-        {{widget('ecombasket', 'ecombasket', {})|raw}}
-    </div>
     {{zone('main')|raw}}
 </div> 
 
