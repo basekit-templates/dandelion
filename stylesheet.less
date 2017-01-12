@@ -697,6 +697,12 @@ select[name="displayCount"] {
     }
 }
 
+.ecom-productslist-image,
+.ecom-featuredproducts-image {
+    max-height: 100%;
+    margin: 0 auto;
+}
+
 /* ===============================
    MENU SECTIONS NAVIGATION
    =============================== */
@@ -1706,15 +1712,17 @@ hr {
             }
         }
         .ecom-product-preview-image-wrap {
+            background-color: @color-swatch2;
             img {
                 border: 1.5em solid @color-swatch2;
                 display: block;
                 max-height: 600px;
+                margin: 0 auto;
                 @media @tablet {
                     max-height: 400px;
                 }
                 @media @mobile {
-                    width: 100%;
+                    width: auto;
                     max-height: 250px;
                 }
             }
