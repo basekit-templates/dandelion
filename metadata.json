@@ -1,5 +1,6 @@
 {
     "name":"Dandelion",
+    "versionTenCompatible": 1,
     "thumbnail":"dandelion.png",
     "screenshot":"dandelion-screenshot.jpg",
     "templateType":"ecommerce",
